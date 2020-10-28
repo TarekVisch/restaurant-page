@@ -1,1 +1,1 @@
-(()=>{"use strict";document.getElementById("content").appendChild(function(){const e=document.createElement("div");return e.textContent="This is the header",e}())})();
+console.log("Hello World!");

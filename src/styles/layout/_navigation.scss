@@ -6,7 +6,7 @@
   position: fixed;
   transform: translate(0px, -100%);
 
-  background: rgb(23, 23, 25);
+  background: $black;
 
   &__container {
     margin: 0 auto;
@@ -35,11 +35,12 @@
     &--col {
       display: flex;
       align-items: center;
+      overflow: hidden;
     }
   }
 
-  &__images {
-  }
+  // &__images {
+  // }
 
   &__link {
     &:link,

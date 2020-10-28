@@ -16,6 +16,12 @@
     transition: all 0.3s ease-out;
     color: $bg-color;
 
+    &.brown {
+      background-color: $brown;
+      border-color: $brown;
+      color: $bg-color;
+    }
+
     &:hover {
       color: $white;
       background-color: transparent;

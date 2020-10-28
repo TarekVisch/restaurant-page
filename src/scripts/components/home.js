@@ -10,7 +10,7 @@ export const Home = () => {
       .from('.quote-text', {
         duration: 1.5,
         y: '-100%',
-        stagger: 0.55,
+        stagger: 1,
         ease: 'power4.out',
       });
   };

@@ -31,6 +31,24 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.header__logo {
+  position: relative;
+}
+.header__logo--link {
+  display: block;
+}
+.header__logo--link svg {
+  height: 3rem;
+  width: auto;
+}
+.header__logo--link-text {
+  fill: #ece8e1;
+  transition: fill 0.2s ease;
+}
+.header__logo--link-text.brown {
+  fill: #9a887b;
+}
+
 .navigation {
   top: 0px;
   left: 0px;
@@ -63,6 +81,7 @@ body {
 .navigation__links--col {
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 .navigation__link:link, .navigation__link:visited {
   text-decoration: none;
@@ -103,6 +122,11 @@ body {
   background-color: #ece8e1;
   border: 2px solid #ece8e1;
   transition: all 0.3s ease-out;
+  color: #0f1923;
+}
+.button__main.brown {
+  background-color: #9a887b;
+  border-color: #9a887b;
   color: #0f1923;
 }
 .button__main:hover {

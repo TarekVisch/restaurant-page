@@ -10,8 +10,8 @@ export const Navigation = () => {
     const btn = document.querySelector('.button__main');
 
     if (!isOpen) {
-      logoText.classList.add('brown');
-      btn.classList.add('brown');
+      logoText.classList.add('onChange');
+      btn.classList.add('onChange');
 
       // Bring navigation down
       gsap.to('.navigation', { duration: 1, y: 0, ease: 'power2.out' });
@@ -37,8 +37,8 @@ export const Navigation = () => {
 
       isOpen = true;
     } else {
-      logoText.classList.remove('brown');
-      btn.classList.remove('brown');
+      logoText.classList.remove('onChange');
+      btn.classList.remove('onChange');
 
       // Revert back
       gsap.to('.navigation', { duration: 1, y: '-100%', ease: 'power2.out' });

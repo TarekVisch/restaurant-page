@@ -8,6 +8,7 @@
     margin: 0 auto;
     margin-top: 11.4rem;
     padding: 0 9vw;
+    padding-bottom: 2rem;
 
     display: flex;
     justify-content: space-between;
@@ -28,7 +29,7 @@
         fill: $white;
         transition: fill 0.2s ease;
 
-        &.brown {
+        &.onChange {
           fill: $brown;
         }
       }

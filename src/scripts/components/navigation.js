@@ -2,13 +2,11 @@ import { gsap } from 'gsap';
 
 export const Navigation = () => {
   let isOpen = false;
+  const logoText = document.querySelector('.header__logo--link-text');
+  const btn = document.querySelector('.button__main');
+  const timeline = gsap.timeline();
 
   const toggle = () => {
-    const timeline = gsap.timeline();
-
-    const logoText = document.querySelector('.header__logo--link-text');
-    const btn = document.querySelector('.button__main');
-
     if (!isOpen) {
       logoText.classList.add('onChange');
       btn.classList.add('onChange');

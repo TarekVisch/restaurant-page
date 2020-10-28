@@ -1,0 +1,20 @@
+.header {
+  // border: 1px solid red;
+  position: relative;
+
+  &__container {
+    margin: 0 auto;
+    margin-top: 11.4rem;
+    padding: 0 9vw;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+  }
+
+  &__buttons {
+    // border: 1px solid black;
+  }
+}

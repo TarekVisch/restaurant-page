@@ -3,6 +3,8 @@
   position: relative;
 
   &__container {
+    position: relative;
+    z-index: 100;
     margin: 0 auto;
     margin-top: 11.4rem;
     padding: 0 9vw;

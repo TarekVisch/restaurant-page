@@ -23,6 +23,8 @@ body {
   position: relative;
 }
 .header__container {
+  position: relative;
+  z-index: 100;
   margin: 0 auto;
   margin-top: 11.4rem;
   padding: 0 9vw;
@@ -90,20 +92,31 @@ body {
   font-family: inherit;
   text-decoration: none;
   background-color: transparent;
-  color: #ece8e1;
+  outline: none;
   cursor: pointer;
 }
 .button__main {
   font-weight: 600;
-  text-transform: uppercase;
-  border: 2px solid rgba(236, 232, 225, 0.5);
+  text-transform: capitalize;
   border-radius: 4rem;
   padding: 0 4rem;
+  background-color: #ece8e1;
+  border: 2px solid #ece8e1;
   transition: all 0.3s ease-out;
+  color: #0f1923;
 }
 .button__main:hover {
-  color: #0f1923;
-  background-color: #ece8e1;
+  color: #ece8e1;
+  background-color: transparent;
+  border-color: rgba(236, 232, 225, 0.5);
+}
+.button__main--container {
+  height: 1.9rem;
+  overflow: hidden;
+}
+.button__main--container-inside {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=main.css.map */

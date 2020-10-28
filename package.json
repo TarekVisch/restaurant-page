@@ -5,15 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TarekVisch/restaurant-page.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Chentouf Tarek",
+  "license": "Apache License 2.0",
   "bugs": {
     "url": "https://github.com/TarekVisch/restaurant-page/issues"
   },
@@ -21,5 +22,8 @@
   "devDependencies": {
     "webpack": "^5.2.0",
     "webpack-cli": "^4.1.0"
+  },
+  "dependencies": {
+    "gsap": "^3.5.1"
   }
 }

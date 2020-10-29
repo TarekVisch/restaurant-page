@@ -3,6 +3,10 @@
   &__home {
     padding: 0 9vw;
 
+    @media only screen and (max-width: 1200px) {
+      padding: 0 4vw;
+    }
+
     &--container {
       //border: 1px solid $white;
 
@@ -28,6 +32,14 @@
           text-transform: uppercase;
           color: #ffffff;
           display: inline-block;
+
+          @media only screen and (max-width: 1024px) {
+            font-size: 17rem;
+          }
+
+          @media only screen and (max-width: 768px) {
+            font-size: 14.5rem;
+          }
         }
       }
 
@@ -59,9 +71,7 @@
         color: #ffffff;
         position: absolute;
         overflow: hidden;
-
-        &-text {
-        }
+        z-index: 15;
 
         &:nth-child(1) {
           left: 22%;

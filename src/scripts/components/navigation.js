@@ -40,7 +40,7 @@ export const Navigation = () => {
     gsap.to('.navigation', { duration: 1, y: '-100%', ease: 'power2.out' });
     gsap.to('.button__main--container-inside', {
       duration: 0.5,
-      y: 0,
+      y: '2%',
       ease: 'power2.out',
     });
 

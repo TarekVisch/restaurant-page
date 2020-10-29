@@ -35,10 +35,9 @@
       &-inside {
         display: flex;
         flex-direction: column;
+
+        transform: translateY(2%);
       }
     }
-  }
-
-  &__sun {
   }
 }

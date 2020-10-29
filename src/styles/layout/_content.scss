@@ -82,4 +82,84 @@
       }
     }
   }
+
+  /* Meat */
+  &__menu {
+    padding: 0 9vw;
+
+    &--container {
+      width: 100%;
+      border-top: 2px solid #ffffff;
+      position: relative;
+    }
+
+    &--header {
+      color: $white;
+      font-size: 7rem;
+      font-weight: 600;
+      margin: 2rem 0 2rem 6rem;
+    }
+
+    &--gallery {
+      margin: 10rem 0;
+
+      &-row {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+      }
+
+      &-col {
+        width: 30%;
+        margin-bottom: 5rem;
+      }
+    }
+
+    &--dishe {
+      text-align: center;
+
+      &-image {
+        width: 100%;
+        margin-bottom: 2rem;
+        position: relative;
+        box-shadow: 0 5px 10px rgba($black, 0.8);
+        overflow: hidden;
+
+        cursor: pointer;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($black, 0.4);
+          z-index: 10;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          transition: all 1s ease-in;
+        }
+
+        &:hover img {
+          transform: scale(1.1);
+        }
+      }
+
+      &-text {
+        text-transform: capitalize;
+        color: $white;
+        font-weight: 600;
+        font-size: 1.7rem;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }

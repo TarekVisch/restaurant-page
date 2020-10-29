@@ -106,6 +106,7 @@ body {
 
 .main {
   /* Home */
+  /* Meat */
 }
 .main__home {
   padding: 0 9vw;
@@ -172,6 +173,71 @@ body {
 .main__home--quotes .quote:nth-child(4) {
   left: 59%;
   top: 81%;
+}
+.main__menu {
+  padding: 0 9vw;
+}
+.main__menu--container {
+  width: 100%;
+  border-top: 2px solid #ffffff;
+  position: relative;
+}
+.main__menu--header {
+  color: #ece8e1;
+  font-size: 7rem;
+  font-weight: 600;
+  margin: 2rem 0 2rem 6rem;
+}
+.main__menu--gallery {
+  margin: 10rem 0;
+}
+.main__menu--gallery-row {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.main__menu--gallery-col {
+  width: 30%;
+  margin-bottom: 5rem;
+}
+.main__menu--dishe {
+  text-align: center;
+}
+.main__menu--dishe-image {
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(15, 15, 16, 0.8);
+  overflow: hidden;
+  cursor: pointer;
+}
+.main__menu--dishe-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 16, 0.4);
+  z-index: 10;
+}
+.main__menu--dishe-image img {
+  width: 100%;
+  height: auto;
+  transition: all 1s ease-in;
+}
+.main__menu--dishe-image:hover img {
+  transform: scale(1.1);
+}
+.main__menu--dishe-text {
+  text-transform: capitalize;
+  color: #ece8e1;
+  font-weight: 600;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.main__menu--dishe-text:hover {
+  text-decoration: underline;
 }
 
 .button {

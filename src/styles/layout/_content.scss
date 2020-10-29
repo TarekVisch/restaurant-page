@@ -89,15 +89,29 @@
 
     &--container {
       width: 100%;
-      border-top: 2px solid #ffffff;
       position: relative;
+
+      &-borderTop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #ffffff;
+      }
+
+      &-header {
+        overflow: hidden;
+        padding: 1rem 9rem;
+      }
     }
 
     &--header {
       color: $white;
       font-size: 7rem;
       font-weight: 600;
-      margin: 2rem 0 2rem 6rem;
+      display: inline-block;
+      transform: translateY(-80px);
     }
 
     &--gallery {
@@ -112,6 +126,7 @@
       &-col {
         width: 30%;
         margin-bottom: 5rem;
+        opacity: 0;
       }
     }
 

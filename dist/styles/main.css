@@ -179,14 +179,26 @@ body {
 }
 .main__menu--container {
   width: 100%;
-  border-top: 2px solid #ffffff;
   position: relative;
+}
+.main__menu--container-borderTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+}
+.main__menu--container-header {
+  overflow: hidden;
+  padding: 1rem 9rem;
 }
 .main__menu--header {
   color: #ece8e1;
   font-size: 7rem;
   font-weight: 600;
-  margin: 2rem 0 2rem 6rem;
+  display: inline-block;
+  transform: translateY(-80px);
 }
 .main__menu--gallery {
   margin: 10rem 0;
@@ -199,6 +211,7 @@ body {
 .main__menu--gallery-col {
   width: 30%;
   margin-bottom: 5rem;
+  opacity: 0;
 }
 .main__menu--dishe {
   text-align: center;

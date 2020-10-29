@@ -1,12 +1,11 @@
 import { gsap } from 'gsap';
 
 export const Sections = () => {
-  // State
-  const timeLine = gsap.timeline();
+  const load = (section) => {
+    const timeLine = gsap.timeline();
 
-  const load = () => {
-    console.log('Im here');
     timeLine
+      .to(section, { duration: 0, display: 'block' })
       .to('.containerTopBorder', {
         duration: 1.5,
         width: '100%',
@@ -21,5 +20,22 @@ export const Sections = () => {
       });
   };
 
-  return { load };
+  const unload = (section) => {
+    const timeLine = gsap.timeline();
+
+    timeLine
+      .to('.gallery-col', {
+        duration: 0.5,
+        opacity: 0,
+        stagger: 0.25,
+      })
+      .to('.main__menu--header', { duration: 0.5, y: -80 })
+      .to('.containerTopBorder', {
+        duration: 0.75,
+        width: '0%',
+      })
+      .to(section, { duration: 0, display: 'none' });
+  };
+
+  return { load, unload };
 };

@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 export const Home = () => {
   const timeline = gsap.timeline();
 
-  const handleLoad = () => {
+  const show = () => {
     timeline
       .from('.text-hero', { duration: 1.5, x: '-100%', ease: 'back.out(1.7)' })
       .from('.image-hero', { duration: 2, y: '-100%', ease: 'power4.out' })
@@ -15,5 +15,5 @@ export const Home = () => {
       });
   };
 
-  return { handleLoad };
+  return { show };
 };

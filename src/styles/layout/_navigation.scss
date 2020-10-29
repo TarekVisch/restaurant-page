@@ -36,11 +36,12 @@
       display: flex;
       align-items: center;
       overflow: hidden;
+
+      .link {
+        transform: translateY(100%);
+      }
     }
   }
-
-  // &__images {
-  // }
 
   &__link {
     &:link,
@@ -63,6 +64,7 @@
     width: 4.2rem;
     height: 3px;
     margin: 0 2rem;
+    opacity: 0;
     background-color: rgba($white, 0.5);
   }
 }

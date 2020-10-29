@@ -1,10 +1,31 @@
+import { PageLoader } from './components/PageLoader';
 import { Navigation } from './components/navigation';
-import { Home } from './components/home';
-import { Sections } from './components/sections';
 
 const menuButton = document.getElementById('menuButton');
-menuButton.addEventListener('click', Navigation().toggle);
+let isOpen = false;
+menuButton.addEventListener('click', () => {
+  if (!isOpen) {
+    Navigation().load();
+    isOpen = true;
+  } else {
+    Navigation().unload();
+    isOpen = false;
+  }
+});
 
-const playBtn = document.querySelector('.play');
-playBtn.addEventListener('click', Sections().load);
-// window.addEventListener('load', Home().handleLoad);
+const main = document.querySelector('.main');
+for (const link of document.querySelectorAll('.navigation__link')) {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const section = e.target.dataset.section;
+
+    if (section) {
+      // Close Navigation
+      Navigation().unload();
+      isOpen = false;
+
+      PageLoader(main, section);
+    }
+  });
+}

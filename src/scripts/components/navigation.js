@@ -1,54 +1,58 @@
 import { gsap } from 'gsap';
 
 export const Navigation = () => {
-  let isOpen = false;
   const logoText = document.querySelector('.header__logo--link-text');
   const btn = document.querySelector('.button__main');
-  const timeline = gsap.timeline();
 
-  const toggle = () => {
-    if (!isOpen) {
-      logoText.classList.add('onChange');
-      btn.classList.add('onChange');
+  const load = () => {
+    const timeline = gsap.timeline();
 
-      // Bring navigation down
-      gsap.to('.navigation', { duration: 1, y: 0, ease: 'power2.out' });
+    logoText.classList.add('onChange');
+    btn.classList.add('onChange');
 
-      // Change from 'Menu' to 'Close'
-      gsap.to('.button__main--container-inside', {
-        duration: 0.5,
-        y: '-50%',
-        ease: 'power2.out',
-      });
+    // Bring navigation down
+    gsap.to('.navigation', { duration: 1, y: 0, ease: 'power2.out' });
 
-      // Show links
-      timeline.from('.link', {
-        duration: 1,
-        delay: 1,
-        y: '100%',
-        stagger: 0.25,
-        ease: 'slow',
-      });
+    // Change from 'Menu' to 'Close'
+    gsap.to('.button__main--container-inside', {
+      duration: 0.5,
+      y: '-50%',
+      ease: 'power2.out',
+    });
 
-      // Show seperators
-      timeline.from('.navigation__seperator', { duration: 0.5, opacity: 0 });
+    // Show links
+    timeline.to('.link', {
+      duration: 1,
+      delay: 1,
+      y: '0%',
+      stagger: 0.25,
+      ease: 'slow',
+    });
 
-      isOpen = true;
-    } else {
-      logoText.classList.remove('onChange');
-      btn.classList.remove('onChange');
+    // Show seperators
+    timeline.to('.navigation__seperator', { duration: 0.5, opacity: 1 });
+  };
+  const unload = () => {
+    logoText.classList.remove('onChange');
+    btn.classList.remove('onChange');
 
-      // Revert back
-      gsap.to('.navigation', { duration: 1, y: '-100%', ease: 'power2.out' });
-      gsap.to('.button__main--container-inside', {
-        duration: 0.5,
-        y: 0,
-        ease: 'power2.out',
-      });
+    // Revert back
+    gsap.to('.navigation', { duration: 1, y: '-100%', ease: 'power2.out' });
+    gsap.to('.button__main--container-inside', {
+      duration: 0.5,
+      y: 0,
+      ease: 'power2.out',
+    });
 
-      isOpen = false;
-    }
+    // Hide seperators
+    gsap.to('.navigation__seperator', { duration: 0, opacity: 0 });
+
+    // Hide links
+    gsap.to('.link', {
+      duration: 0,
+      y: '100%',
+    });
   };
 
-  return { toggle };
+  return { load, unload };
 };

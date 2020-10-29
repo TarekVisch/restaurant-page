@@ -1,3 +1,7 @@
 export const PageLoader = (container, section) => {
-  console.log(container, section);
+  import(`./${section}`).then((module) => {
+    let sectionObject = module[section]();
+    container.innerHTML = sectionObject.html;
+    sectionObject.load();
+  });
 };

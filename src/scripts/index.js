@@ -1,5 +1,15 @@
 import { PageLoader } from './components/PageLoader';
+import { Home } from './components/Home';
 import { Navigation } from './components/navigation';
+
+// Main container
+const main = document.querySelector('.main');
+
+// Load Home page first
+window.addEventListener('load', function () {
+  main.innerHTML = Home().html;
+  Home().load();
+});
 
 const menuButton = document.getElementById('menuButton');
 let isOpen = false;
@@ -13,7 +23,6 @@ menuButton.addEventListener('click', () => {
   }
 });
 
-const main = document.querySelector('.main');
 for (const link of document.querySelectorAll('.navigation__link')) {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -24,7 +33,7 @@ for (const link of document.querySelectorAll('.navigation__link')) {
       // Close Navigation
       Navigation().unload();
       isOpen = false;
-
+      // Load Page
       PageLoader(main, section);
     }
   });

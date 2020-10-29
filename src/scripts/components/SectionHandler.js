@@ -1,26 +1,25 @@
 import { gsap } from 'gsap';
 
-export const Sections = () => {
-  const load = (section) => {
+export const SectionHandler = () => {
+  const load = () => {
     const timeLine = gsap.timeline();
 
     timeLine
-      .to(section, { duration: 0, display: 'block' })
-      .to('.containerTopBorder', {
+      .from('.containerTopBorder', {
         duration: 1.5,
-        width: '100%',
+        width: '0%',
         ease: 'power4.in',
       })
-      .to('.main__menu--header', { duration: 1, y: 0, ease: 'power4.out' })
-      .to('.gallery-col', {
+      .from('.main__menu--header', { duration: 1, y: -100, ease: 'power4.out' })
+      .from('.gallery-col', {
         duration: 1,
-        opacity: 1,
+        opacity: 0,
         stagger: 0.5,
         ease: 'power2.out',
       });
   };
 
-  const unload = (section) => {
+  const unload = () => {
     const timeLine = gsap.timeline();
 
     timeLine
@@ -33,8 +32,7 @@ export const Sections = () => {
       .to('.containerTopBorder', {
         duration: 0.75,
         width: '0%',
-      })
-      .to(section, { duration: 0, display: 'none' });
+      });
   };
 
   return { load, unload };

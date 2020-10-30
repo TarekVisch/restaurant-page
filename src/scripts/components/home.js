@@ -33,12 +33,12 @@ export const Home = () => {
   const load = () => {
     const timeline = gsap.timeline();
     timeline
-      .from('.text-hero', { duration: 1.5, x: '-100%', ease: 'back.out(1.7)' })
-      .from('.image-hero', { duration: 2, y: '-100%', ease: 'power4.out' })
+      .from('.text-hero', { duration: 1, x: '-100%', ease: 'back.out(1.7)' })
+      .from('.image-hero', { duration: 1.5, y: '-100%', ease: 'power4.out' })
       .from('.quote-text', {
-        duration: 1.5,
+        duration: 0.75,
         y: '-100%',
-        stagger: 1,
+        stagger: 0.5,
         ease: 'power4.out',
       });
   };

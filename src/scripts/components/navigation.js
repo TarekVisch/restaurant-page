@@ -22,7 +22,7 @@ export const Navigation = () => {
 
     // Show links
     timeline.to('.link', {
-      duration: 1,
+      duration: 0.5,
       delay: 1,
       y: '0%',
       stagger: 0.25,
